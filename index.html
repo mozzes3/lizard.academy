@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lizard.academy</title>
+    <style>
+        body {
+            /* 1. Sets the white background */
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+            /* These rules ensure the footer stays at the bottom */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* This main container grows to fill all available space */
+        main {
+            flex: 1; 
+            
+            /* 2. This centers the image in the middle of the 'main' area */
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+            padding: 20px; /* Adds some spacing */
+        }
+
+        img {
+            max-width: 100%; /* Makes the image responsive */
+            height: auto;
+            display: block;
+        }
+
+        /* 3. This styles the text at the bottom */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <img src="lizardacademy2.png" alt="lizard.academy">
+    </main>
+
+    <footer>
+        <p>lizard.academy is product of Wise Lizard Studios.</p>
+    </footer>
+
+</body>
+</html>
