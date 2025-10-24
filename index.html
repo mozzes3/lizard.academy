@@ -3,49 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <meta name="description" content="lizard.academy, web3 masterclass academy">
     
     <title>lizard.academy</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="lizard.academy, web3 masterclass academy">
+
     <style>
         body {
-            /* 1. Sets the white background */
             background-color: #ffffff; 
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-
-            /* These rules ensure the footer stays at the bottom */
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+
+            /* --- CHANGES --- */
+            /* 1. Lock the body to the exact height of the screen */
+            height: 100vh; 
+            /* 2. Disable all scrolling */
+            overflow: hidden; 
         }
 
-        /* This main container grows to fill all available space */
         main {
-            flex: 1; 
-            
-            /* 2. This centers the image in the middle of the 'main' area */
+            flex: 1; /* This makes 'main' fill all available space */
             display: flex;
             justify-content: center; 
             align-items: center;   
-            padding: 20px; /* Adds some spacing */
+            padding: 20px;
+
+            /* --- ADDITIONS --- */
+            box-sizing: border-box; /* Makes padding behave predictably */
+            overflow: hidden; /* Ensures the image can't "spill out" */
         }
 
         img {
-            max-width: 100%; /* Makes the image responsive */
-            height: auto;
+            max-width: 100%;
             display: block;
+
+            /* --- ADDITIONS --- */
+            /* 3. Ensures image is never taller than its container */
+            max-height: 100%; 
+            /* 4. Scales image down to fit, preserving aspect ratio */
+            object-fit: contain; 
         }
 
-        /* 3. This styles the text at the bottom */
         footer {
             width: 100%;
             text-align: center;
             padding: 20px 0;
             font-size: 14px;
             color: #555;
+            /* Ensures footer doesn't shrink if content is large */
+            flex-shrink: 0; 
         }
     </style>
 </head>
